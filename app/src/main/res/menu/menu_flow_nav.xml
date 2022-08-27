@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/page_my_repos"
+        android:title="@string/my_repos_title"
+        android:icon="@drawable/nav_my_repos"
+        android:orderInCategory="0"/>
+
+    <item android:id="@+id/page_all_users"
+        android:title="@string/all_users_title"
+        android:icon="@drawable/nav_all_users"
+        android:orderInCategory="1"/>
+
+    <item android:id="@+id/page_profile"
+        android:title="@string/profile_title"
+        android:icon="@drawable/nav_profile"
+        android:orderInCategory="2"/>
+
+</menu>

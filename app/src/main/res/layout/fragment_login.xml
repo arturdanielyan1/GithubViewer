@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".feature_login.presentation.login.LoginFragment">
+
+    <TextView
+        android:id="@+id/login_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_tv"
+        android:textSize="36sp"
+        android:layout_margin="16dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:src="@drawable/app_logo_fg"
+        android:adjustViewBounds="true"
+
+        app:layout_constraintTop_toTopOf="@id/login_tv"
+        app:layout_constraintBottom_toBottomOf="@id/login_tv"
+        app:layout_constraintStart_toEndOf="@id/login_tv"/>
+
+    <EditText
+        android:id="@+id/email_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/email_et_hint"
+        android:layout_margin="16dp"
+        android:background="@drawable/edittext_border"
+        android:singleLine="true"
+        android:scrollHorizontally="true"
+
+        app:layout_constraintTop_toBottomOf="@id/login_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:id="@+id/password_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password_et_hint"
+        android:layout_margin="16dp"
+        android:background="@drawable/edittext_border"
+        android:singleLine="true"
+        android:scrollHorizontally="true"
+
+        app:layout_constraintTop_toBottomOf="@id/email_et"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <FrameLayout
+        android:background="@drawable/button_background"
+        android:id="@+id/login_button_fl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+
+        app:layout_constraintTop_toBottomOf="@id/password_et"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/button_background"
+            android:id="@+id/login_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_tv"
+            android:paddingStart="35dp"
+            android:paddingEnd="35dp"/>
+
+        <ProgressBar
+            android:theme="@style/ProgressBarTheme"
+            android:id="@+id/login_pb"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_password"
+        android:layout_margin="16dp"
+        style="@style/FreeText"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/password_et"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
